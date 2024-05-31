@@ -101,7 +101,7 @@ const enemy = new Fighter({
     x: -50,
     y: 0,
   },
-  imageSrc: './img/kenji/idle.png',
+  imageSrc: './img/kenji/idlek.png',
   framesMax: 6,
   scale: 1.6,
   offset: {
@@ -110,31 +110,31 @@ const enemy = new Fighter({
   },
   sprites: {
     idle: {
-      imageSrc: './img/kenji/idle.png',
+      imageSrc: './img/kenji/idlek.png',
       framesMax: 6,
     },
     run: {
-      imageSrc: './img/kenji/run.png',
+      imageSrc: './img/kenji/runk.png',
       framesMax: 8,
     },
     jump: {
-      imageSrc: './img/kenji/jump.png',
+      imageSrc: './img/kenji/jumpk.png',
       framesMax: 2,
     },
     fall: {
-      imageSrc: './img/kenji/fall.png',
+      imageSrc: './img/kenji/fallk.png',
       framesMax: 2,
     },
     attack1: {
-      imageSrc: './img/kenji/attack1.png',
+      imageSrc: './img/kenji/attack1k.png',
       framesMax: 8,
     },
     takeHit: {
-      imageSrc: './img/kenji/takehit.png',
+      imageSrc: './img/kenji/takehitk.png',
       framesMax: 4,
     },
     death: {
-      imageSrc: './img/kenji/death.png',
+      imageSrc: './img/kenji/deathk.png',
       framesMax: 7,
     },
   },
