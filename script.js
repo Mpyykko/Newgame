@@ -65,7 +65,7 @@ const player = new Fighter({
       framesMax: 2,
     },
     attack1: {
-      imageSrc: './img/wizard/attack1.png',
+      imageSrc: './img/wizard/attack2.png',
       framesMax: 8,
     },
     takeHit: {
