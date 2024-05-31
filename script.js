@@ -40,7 +40,7 @@ const player = new Fighter({
     x: 0,
     y: 0,
   },
-  imageSrc: './img/Evil Wizard 2/Idle.png',
+  imageSrc: './img/EvilWizard2/Idle.png',
   framesMax: 8,
   scale: 2.5,
   offset: {
@@ -49,31 +49,31 @@ const player = new Fighter({
   },
   sprites: {
     idle: {
-      imageSrc: './img/Evil Wizard 2/Idle.png',
+      imageSrc: './img/EvilWizard2/Idle.png',
       framesMax: 8,
     },
     run: {
-      imageSrc: './img/Evil Wizard 2/Run.png',
+      imageSrc: './img/EvilWizard2/Run.png',
       framesMax: 8,
     },
     jump: {
-      imageSrc: './img/Evil Wizard 2/Jump.png',
+      imageSrc: './img/EvilWizard2/Jump.png',
       framesMax: 2,
     },
     fall: {
-      imageSrc: './img/Evil Wizard 2/Fall.png',
+      imageSrc: './img/EvilWizard2/Fall.png',
       framesMax: 2,
     },
     attack1: {
-      imageSrc: './img/Evil Wizard 2/Attack1.png',
+      imageSrc: './img/EvilWizard2/Attack1.png',
       framesMax: 8,
     },
     takeHit: {
-      imageSrc: './img/Evil Wizard 2/Takehit.png',
+      imageSrc: './img/EvilWizard2/Takehit.png',
       framesMax: 3,
     },
     death: {
-      imageSrc: './img/Evil Wizard 2/Death.png',
+      imageSrc: './img/EvilWizard2/Death.png',
       framesMax: 7,
     },
   },
