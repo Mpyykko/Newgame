@@ -72,7 +72,7 @@ const player = new Fighter({
       framesMax: 8
     },
     takeHit: {
-      imageSrc: './img/Evil Wizard 2/Take Hit.png',
+      imageSrc: './img/Evil Wizard 2/Takehit.png',
       framesMax: 3
     },
     death: {
@@ -133,7 +133,7 @@ const enemy = new Fighter({
       framesMax: 8
     },
     takeHit: {
-      imageSrc: './img/kenji/Take hit.png',
+      imageSrc: './img/kenji/Takehit.png',
       framesMax: 4
     },
     death: {
