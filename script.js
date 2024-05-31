@@ -65,7 +65,7 @@ const player = new Fighter({
       framesMax: 2,
     },
     attack1: {
-      imageSrc: './img/wizard/attack1.png',
+      imageSrc: './img/wizard/attack2.png',
       framesMax: 8,
     },
     takeHit: {
@@ -347,7 +347,10 @@ function newGameKey(event) {
 function newGame() {
   location.reload();
   console.log('Uusi peli');
-}
+
+};
+
+
 
 function startGame() {
   const element = document.getElementById('startMenu');
