@@ -20,12 +20,6 @@ class Sprite {
   }
 
   draw() {
-    c.save();
-    c.translate(this.position.x + this.width / 2, this.position.y + this.height / 2);
-    c.scale(this.facing, 1);
-
-    c.translate(-(this.position.x + this.width / 2), -(this.position.y + this.height / 2));
-    
     c.drawImage(
       this.image,
       this.framesCurrent * (this.image.width / this.framesMax),
@@ -37,7 +31,6 @@ class Sprite {
       (this.image.width / this.framesMax) * this.scale,
       this.image.height * this.scale
     )
-    c.restore();
   }
 
   animateFrames() {
@@ -138,7 +131,7 @@ class Fighter extends Sprite {
   }
 
   takeHit() {
-    this.health -= 10
+    this.health -= 6
 
     if (this.health <= 0) {
       this.switchSprite('death')
