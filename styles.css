@@ -11,15 +11,15 @@ canvas{
 
 #gameContainer{
     position: relative;
-    display: inline-block
+    display: inline-block;
 }
 
 #healthAndTimerBar{
     position: absolute;
-            display: flex;
-            width: 100%;
-            align-items: center;
-            padding: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
 }
 #timer{
     background-color: black;
@@ -51,8 +51,6 @@ canvas{
  
 }
 
-
-
 #enemyHealth{
     position: absolute;
     background: #818cf8;
@@ -78,7 +76,7 @@ canvas{
     color: white;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
 
 
@@ -140,8 +138,6 @@ canvas{
     display: flex;
     flex-direction: row;
     gap: 400px;
-  
-
 }
 
 .menuItem {
@@ -149,8 +145,6 @@ canvas{
     color: white;
     margin-top: 300px;
     font-size: small;
-
-   
 }
 
 .menuContent img {
