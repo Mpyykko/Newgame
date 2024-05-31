@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas{
+    max-width: 100%;
+}
+
+#gameContainer{
+    position: relative;
+    display: inline-block
+}
+
+#healthAndTimerBar{
+    position: absolute;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            padding: 20px;
+}
+#timer{
+    background-color: black;
+    width: 100px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 4px solid white;
+}
+#Player1Health{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+#Player2Health{
+    position: relative;
+    width: 100%;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+ 
+}
+
+
+
+#enemyHealth{
+    position: absolute;
+    background: #818cf8;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#playerHealth{
+    position: absolute;
+    background: #818cf8;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+
+#Player1text{
+    position: absolute;
+    z-index: 990;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+
+#Player2text{
+    position: absolute;
+    z-index: 990;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+
+#newGame{
+    position: absolute;
+    color: white;
+    align-items: center;
+    top: 500%;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+
+}
+
+#displayText{
+    position: absolute;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    top: -200;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+}
+
+.startMenu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/both2.png);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#GameName{
+    color: white;
+}
+
+#startButton{
+    position: absolute;
+    bottom: 50;
+    height: 30px;
+}
+
+.menuContent{
+    display: flex;
+    flex-direction: row;
+    gap: 400px;
+  
+
+}
+
+.menuItem {
+    text-align: center;
+    color: white;
+    margin-top: 300px;
+    font-size: small;
+
+   
+}
+
+.menuContent img {
+    width: 100px;
+    max-width: 80%;
+    height:auto;
+  }
+  
+
+
+
+
+
+

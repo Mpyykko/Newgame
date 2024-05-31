@@ -1,0 +1,76 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
+  </head>
+  <body>
+  
+    <div id="gameContainer">
+      <div id="startMenu" class="startMenu"> <h3 id="GameName">Fighting Game</h3> <button id="startButton" onclick="startGame()" > Fight</button>
+        <div class="menuContent">
+          <div class="menuItem">
+              <p> Player 1 controls</p> <br>
+              <p>Left: A</p>
+              <p>Right: D</p>
+              <p>Jump: W</p>
+              <p>Hit: Space</p>
+          </div>
+            
+          <div class="menuItem">
+            
+              <p> Player 2 controls</p> <br>
+              <p>Left: Arrow left</p>
+              <p>Right: Arrow right</p>
+              <p>Jump: Arrow up</p>
+              <p>Hit: Arrow down</p>
+          </div>
+
+        </div>
+        
+      </div>
+
+      <div id="healthAndTimerBar">
+     
+        <div id="player1Health">
+            <div style="background-color: red; height: 30px; width: 100%"> <span id="Player1text" > Player 1</span></div>
+            <div id="playerHealth"></div>
+        </div>
+
+        <div id="timer"></div>
+         
+        <div id="player2Health">
+            <div  style="background-color: red; height: 30px;"> <span id="Player2text" > Player 2</span></div>
+            <div id="enemyHealth"></div>
+        </div> 
+        <div id="newGame"> New game Y/N </div>
+      </div>
+          
+      <div id="displayText">Tie</div>
+          
+      <canvas id="canvas"></canvas>
+
+        
+       
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/utils.js"></script>
+    <script src="js/classes2.js"></script>
+    <script src="script.js"></script>    
+  </body>
+
