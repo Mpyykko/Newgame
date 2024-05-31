@@ -6,7 +6,10 @@ canvas.height = 576
 
 c.fillRect(0, 0, canvas.width, canvas.height)
 
+
 const gravity = 0.7
+
+let gameOver = false;
 
 const background = new Sprite({
   position: {
@@ -46,6 +49,7 @@ const player = new Fighter({
     x: 215,
     y: 210
   },
+
   sprites: {
     idle: {
       imageSrc: './img/Evil Wizard 2/Idle.png',
@@ -88,8 +92,8 @@ const player = new Fighter({
 
 const enemy = new Fighter({
   position: {
-    x: 400,
-    y: 100
+    x: 800,
+    y: 0
   },
   velocity: {
     x: 0,
@@ -164,10 +168,17 @@ const keys = {
   }
 }
 
-decreaseTimer()
+
+
 
 function animate() {
-  window.requestAnimationFrame(animate)
+ 
+ 
+    window.requestAnimationFrame(animate);
+
+  
+  
+  
   c.fillStyle = 'black'
   c.fillRect(0, 0, canvas.width, canvas.height)
   background.update()
@@ -177,17 +188,23 @@ function animate() {
   player.update()
   enemy.update()
 
+  
+
+  
   player.velocity.x = 0
   enemy.velocity.x = 0
 
   // player movement
 
+
   if (keys.a.pressed && player.lastKey === 'a') {
     player.velocity.x = -5
     player.switchSprite('run')
+    player.facing = -1;
   } else if (keys.d.pressed && player.lastKey === 'd') {
     player.velocity.x = 5
     player.switchSprite('run')
+    player.facing = 1;
   } else {
     player.switchSprite('idle')
   }
@@ -203,9 +220,11 @@ function animate() {
   if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
     enemy.velocity.x = -5
     enemy.switchSprite('run')
+    enemy.facing = 1;
   } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
     enemy.velocity.x = 5
     enemy.switchSprite('run')
+    enemy.facing = -1;
   } else {
     enemy.switchSprite('idle')
   }
@@ -217,6 +236,7 @@ function animate() {
     enemy.switchSprite('fall')
   }
 
+  
   // detect for collision & enemy gets hit
   if (
     rectangularCollision({
@@ -224,7 +244,8 @@ function animate() {
       rectangle2: enemy
     }) &&
     player.isAttacking &&
-    player.framesCurrent === 4
+    player.framesCurrent === 4 &&
+    !gameOver
   ) {
     enemy.takeHit()
     player.isAttacking = false
@@ -246,7 +267,8 @@ function animate() {
       rectangle2: player
     }) &&
     enemy.isAttacking &&
-    enemy.framesCurrent === 2
+    enemy.framesCurrent === 2 &&
+    !gameOver
   ) {
     player.takeHit()
     enemy.isAttacking = false
@@ -261,19 +283,29 @@ function animate() {
     enemy.isAttacking = false
   }
 
+  
+
   // end game based on health
-  if (enemy.health <= 0 || player.health <= 0) {
+  if (enemy.health <= 0 || player.health <= 0 || timer === 0) {
     determineWinner({ player, enemy, timerId })
-
-  // new game
-
-    document.addEventListener('keydown', newGameKey);
-
-
+  
+    gameOver = true;
+  
   }
-}
 
-animate()
+ 
+  
+} 
+
+
+
+
+
+
+
+
+
+
 
 window.addEventListener('keydown', (event) => {
   if (!player.dead) {
@@ -339,18 +371,43 @@ window.addEventListener('keyup', (event) => {
 
 
 
+
+
 // this is for the new game
+
+
 
 function newGameKey(event) {
   if (event.key === 'y' || event.key === 'Y') {
-      document.removeEventListener('keydown', newGameKey);
-      startNewGame();
+    document.removeEventListener('keydown', newGameKey);
+    gameOver = false;
+    newGame();
+   
   }
 }
 
-function startNewGame() {
-  console.log('Aloitetaan uusi peli');
- 
+function newGame() {
   
+  animate();
+  console.log('Uusi peli');
 }
+
+
+function startGame() {
+  const element = document.getElementById('startMenu');
+  element.style.display = 'none';
+  animate();
+  decreaseTimer();
+}
+
+
+
+
+
+
+
+
+
+
+
 
